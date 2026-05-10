@@ -1,5 +1,14 @@
 <html>
   <body>
-    <%= message %>
+    <h1>Mini Messageboard</h1>
+    <div id="messages-container">
+        <% for ( let i = 0; i < messages.length; i++ ) { %>
+            <%- include('message', {
+                user: messages[i].user,
+                text: messages[i].text,
+                added: messages[i].added,
+            }) %>
+        <% } %>
+    </div>
   </body>
 </html>
