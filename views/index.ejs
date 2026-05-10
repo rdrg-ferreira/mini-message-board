@@ -1,14 +1,17 @@
 <html>
-  <body>
-    <h1>Mini Messageboard</h1>
-    <div id="messages-container">
-        <% for ( let i = 0; i < messages.length; i++ ) { %>
-            <%- include('message', {
-                user: messages[i].user,
-                text: messages[i].text,
-                added: messages[i].added,
-            }) %>
-        <% } %>
-    </div>
-  </body>
+    <body>
+        <header>
+            <h1>Mini Messageboard</h1>
+            <a href="/new" >New message</a>
+        </header>
+        <div id="messages-container">
+            <% for ( let i = 0; i < messages.length; i++ ) { %>
+                <%- include('message', {
+                    user: messages[i].user,
+                    text: messages[i].text,
+                    added: messages[i].added,
+                }) %>
+            <% } %>
+        </div>
+    </body>
 </html>

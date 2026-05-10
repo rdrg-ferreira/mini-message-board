@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h1>Create a new message</h1>
+        <form method="POST" action="/new" id="create-message-form">
+            <div class="input">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input">
+                <label for="msg">Message</label>
+                <textarea name="msg" id="msg" required></textarea>
+            </div>
+            <button type="submit">Create</button>
+        </form>
+    </body>
+</html>
